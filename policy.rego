@@ -7,7 +7,6 @@ default ignore = false
 ignore_severities := {"LOW", "MEDIUM"}
 
 ignore_cves := {
-      "CVE-2022-37434" 
 }
 
 ignore {
