@@ -1,7 +1,19 @@
-# Demo Project README
+package trivy
 
-This is a simple readme file
+import data.lib.trivy
 
-## Heading 2
-Adding some text
-Mmmmm Brunch
+default ignore = false
+
+ignore_severities := {"LOW", "MEDIUM"}
+
+ignore_cves := {
+      "CVE-2022-37434" 
+}
+
+ignore {
+	input.VulnerabilityID == ignore_cves[_]
+}
+
+ignore {
+	input.Severity == ignore_severities[_]
+}
