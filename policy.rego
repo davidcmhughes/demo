@@ -4,9 +4,10 @@ import data.lib.trivy
 
 default ignore = false
 
-ignore_severities := {}
+ignore_severities := {"LOW", "MEDIUM"}
 
-ignore_cves := {}
+ignore_cves := {
+}
 
 ignore {
 	input.VulnerabilityID == ignore_cves[_]
